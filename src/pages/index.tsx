@@ -12,7 +12,7 @@ interface IHomeProps {
 }
 
 export default function Home({ product }: IHomeProps) {
-  console.log(product);
+  fetch('http://localhost:3000/api/hello');
   return (
     <div>
       <Head>
