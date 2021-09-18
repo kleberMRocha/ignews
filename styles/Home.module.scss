@@ -37,17 +37,4 @@
       font-weight: bold;
     }
   }
-
-  button {
-    margin-top: 2.5rem;
-    width: 260px;
-    height: 64px;
-    border-radius: 260px;
-    border: none;
-    background-color: var(--yellow-500);
-    font-weight: bold;
-    &:hover {
-      filter: brightness(1.1);
-    }
-  }
 }
