@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { SubButton } from '../components/SubscribeButton/index';
 import styles from '../../styles/Home.module.scss';
 import { GetServerSideProps } from 'next';
-import { stripe } from '../services';
+import { stripe } from '../services/stripe';
 
 interface IHomeProps {
   product: {

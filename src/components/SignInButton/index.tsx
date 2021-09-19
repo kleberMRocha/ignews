@@ -14,9 +14,9 @@ export const SignInButton: React.FC = () => {
       {session ? session.user.name : 'Sing in with GitHub'}
       {session && 
       (
-       <button className={styles.btnSignOut} type="button" onClick={() => signOut()}> 
+       <a className={styles.btnSignOut} type="button" onClick={() => signOut()}> 
         <FiXCircle className={styles.close} color="#e1e1e6" />
-       </button>
+       </a>
       )
      
       }
