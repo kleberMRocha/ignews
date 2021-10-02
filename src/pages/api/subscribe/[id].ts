@@ -14,12 +14,9 @@ type IUser = {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
   const {id} = req.query;
   const session = await getSession({req});
-
-  const stripeCostumer = await stripe.customers.create({
-    email: session.user.email,
-  });
 
   const user = await fauna.query<IUser>(
     q.Get(q.Match(
@@ -28,9 +25,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ))
   );
 
-  let customerStripeId = user.data.stripe_customer_id;
-  
+
+  let customerStripeId = user.data.stripe_customer_id || null;
+
   if(!customerStripeId){
+
+  const stripeCostumer = await stripe.customers.create({
+    email: session.user.email,
+  });
+
     await fauna.query(
       q.Update(
         q.Ref(q.Collection('users'),user.ref.id),

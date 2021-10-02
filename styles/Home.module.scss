@@ -6,6 +6,19 @@
   justify-content: space-between;
   align-items: center;
   height: calc(100vh - 5rem);
+
+  @media (max-width: 800px) {
+    & {
+      flex-wrap: wrap;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    & > img {
+      max-width: 120px;
+      margin: 0 auto;
+    }
+  }
 }
 
 .hero {

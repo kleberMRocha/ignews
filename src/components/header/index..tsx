@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <Image src="/images/logo.svg" alt="Logo" width="100" height="50" />
+        <img src="/images/logo.svg" alt="Logo"  className="logo"  />
         <nav>
           <a className={styles.active}>Home</a>
           <a>Posts</a>
