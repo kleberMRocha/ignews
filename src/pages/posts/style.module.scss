@@ -1,0 +1,42 @@
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  time {
+    font-size: 1rem;
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+    display: block;
+  }
+
+  .post {
+    max-width: 720px;
+    margin: 5rem auto 0;
+  }
+
+  strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: color 0.3s;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--yellow-500);
+      filter: brightness(1.2);
+    }
+  }
+
+  .continueReading {
+    padding: 2rem;
+    text-align: center;
+
+    background: var(--gray-850);
+    border-radius: 100px;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    margin: 4rem 0 2rem;
+  }
+}
