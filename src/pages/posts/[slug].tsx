@@ -53,7 +53,11 @@ export const getServerSideProps: GetServerSideProps = async ({
   const reponse = await Prismic.getByUID('post', String(params.slug), {});
   
   if(session && !session.activeSubscription){
-    return {redirect:{ destination: '/', permanent: false} }
+    return {redirect:{ destination: `/posts/preview/${reponse.uid}`, permanent: false} }
+  }
+
+  if(!session){
+    return {redirect:{ destination: `/posts/preview/${reponse.uid}`, permanent: false} }
   }
    
   const post = {
@@ -70,5 +74,5 @@ export const getServerSideProps: GetServerSideProps = async ({
     ),
   };
 
-  return { props:  post  };
+  return { props:  post, redirect: 60 * 30  }; // 1h
 };

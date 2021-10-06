@@ -39,6 +39,21 @@
 
     margin: 4rem 0 2rem;
   }
+
+  .callToAction {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      background-color: var(--yellow-500);
+      border: 1px solid var(--yellow-500);
+    }
+  }
 }
 
 .postSection {
