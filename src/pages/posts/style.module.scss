@@ -40,3 +40,44 @@
     margin: 4rem 0 2rem;
   }
 }
+
+.postSection {
+  margin: 2% 8%;
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  p {
+    line-height: 1.3rem;
+  }
+  small {
+    display: block;
+    margin: 0.3rem 0;
+    color: #dddddd;
+  }
+
+  @keyframes baunce {
+    to {
+      box-shadow: 1px 1px 8px #ffffff;
+    }
+  }
+
+  a {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+    border: 1px solid #dddddd;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    &:hover {
+      animation: baunce 0.3s ease-in-out alternate 3 forwards;
+    }
+  }
+}

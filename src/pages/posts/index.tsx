@@ -6,8 +6,8 @@ import Head from 'next/head';
 
 import { getPrismicClient } from '../../services/prismic';
 
-import Prismic from '@prismicio/client'
-import { RichText } from 'prismic-dom'
+import Prismic from '@prismicio/client';
+import { RichText } from 'prismic-dom';
 
 import styles from './style.module.scss';
 

@@ -8,8 +8,17 @@ interface ISubProps {
   priceId: string;
 }
 
+
+ 
 export const SubButton: React.FC<ISubProps> = ({ priceId }) => {
-const [session] =  useSession();
+let [session] =  useSession();
+
+const isActiveSub = () => {
+  if(!session)return false;
+  return session.activeSubscription 
+        ? Boolean(session.activeSubscription) 
+        : false
+};
 
 const handleSubscribe = async () => {
   if(!session){
@@ -29,8 +38,10 @@ const handleSubscribe = async () => {
     console.log(error);
     
   }
-  // todo criar checkout 
 };
 
-  return <button  onClick={() => handleSubscribe()} className={styles.subscribeButton}>Subscribe now</button>;
+  return <button  
+  disabled={isActiveSub()}
+  onClick={() => handleSubscribe()} 
+  className={styles.subscribeButton}>Subscribe now</button>;
 };

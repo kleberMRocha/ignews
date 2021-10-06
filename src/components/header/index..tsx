@@ -10,7 +10,8 @@ export const Header: React.FC = () => {
   const { asPath } = useRouter();
 
   const getActiveLink = (path:string, asPath:string) => {
-   return path ===  asPath ? styles.active : '';
+   let slug = (asPath.slice(0,6));
+   return path ===  slug  ? styles.active : '';
   };
 
   return (
