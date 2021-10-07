@@ -26,13 +26,10 @@ pagamento stripe, banco de dados FaunaDB, CMS Prismic e login social com github.
 - [ ] Animações 
 - [ ] Páginas para gerenciamento de informações 
 
-<p align="center">
-
-
-</p>
-
 ## ☁ Demo
 [Acesse o projeto](https://ignews-xi-pied.vercel.app/)
+
+<img src="https://github.com/kleberMRocha/ignews/blob/main/public/images/IGnews.gif" width="600" /> 
   
 
 
