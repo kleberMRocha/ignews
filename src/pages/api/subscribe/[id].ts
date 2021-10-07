@@ -56,8 +56,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       line_items: [{price: String(id), quantity: 1}],
       mode:'subscription',
       allow_promotion_codes: true,
-      success_url: 'http://localhost:3000/posts',
-      cancel_url: 'http://localhost:3000/'
+      success_url: '/posts',
+      cancel_url: '/'
     });
     return res.status(200).json({
       customer_id: checkoutSession.id
